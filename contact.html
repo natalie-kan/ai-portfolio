@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-a+ohD80d/8QOhUOA4mTrfms3q057b1ioPOe8fvslOIU='; style-src 'self'; img-src 'self' data:; font-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Contact | Natalie Kan</title>
+  <meta name="description" content="Connect with Natalie Kan on LinkedIn or explore her public projects on GitHub.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact | Natalie Kan">
+  <meta property="og:description" content="Connect with Natalie Kan on LinkedIn or explore her public projects on GitHub.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23426B8A%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2243%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2230%22%20text-anchor%3D%22middle%22%20fill%3D%22%23FFFFFF%22%3ENK%3C%2Ftext%3E%3C%2Fsvg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top">
+    <a class="logo" href="index.html" data-tab="home"><span class="logo-badge">NK</span><span class="logo-text">Natalie Kan</span></a>
+    <nav class="tabs" aria-label="Main">
+      <a href="index.html" data-tab="home">Home</a>
+      <a href="about.html" data-tab="about">About</a>
+      <a href="ai-workflows.html" data-tab="workflows">AI Workflows</a>
+      <a href="contact.html" data-tab="contact" aria-current="page">Contact</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section id="contact" class="page" data-page="contact" aria-labelledby="contact-h">
+      <span class="sticker s-purple">Contact</span>
+      <h1 id="contact-h">Let's exchange <span class="hl">ideas</span>.</h1>
+
+      <div class="cards two">
+        <a class="card link-card c-yellow" href="https://www.linkedin.com/in/kan-natalie/" rel="noopener noreferrer" target="_blank">
+          <h3>LinkedIn</h3>
+          <p>Connect with me for more on my background and the work I share.</p>
+          <span class="go">linkedin.com/in/kan-natalie ↗</span>
+        </a>
+        <a class="card link-card c-coral" href="https://github.com/natalie-kan" rel="noopener noreferrer" target="_blank">
+          <h3>GitHub</h3>
+          <p>Explore my public projects and follow what I'm building.</p>
+          <span class="go">github.com/natalie-kan ↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer class="foot">
+    <span>© <span id="yr">2026</span> Natalie Kan</span>
+  </footer>
+  <script>(function () {
+  'use strict';
+  var year = document.getElementById('yr');
+  if (year) { year.textContent = String(new Date().getFullYear()); }
+  var dialog = document.getElementById('sample-dialog');
+  if (!dialog) { return; }
+  var fullImage = dialog.querySelector('.sample-dialog-image');
+  var title = document.getElementById('sample-dialog-title');
+  document.querySelectorAll('.wf-preview-link').forEach(function (button) {
+    button.addEventListener('click', function () {
+      var image = button.querySelector('img');
+      fullImage.src = image.src;
+      fullImage.alt = image.alt;
+      title.textContent = button.closest('.wf').querySelector('h2').textContent;
+      dialog.showModal();
+    });
+  });
+  dialog.querySelector('.sample-dialog-close').addEventListener('click', function () { dialog.close(); });
+  dialog.addEventListener('click', function (event) { if (event.target === dialog) { dialog.close(); } });
+})();</script>
+</body>
+</html>
